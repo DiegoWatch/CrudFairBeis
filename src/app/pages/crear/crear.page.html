@@ -1,0 +1,124 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>crear información de paciente </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<form [formGroup]="formularioCrear" (submit)="crearDatosPaciente()">
+  <ion-item>
+    <ion-label stacked><b>Edad del paciente: </b></ion-label>
+  </ion-item>
+    <ion-item><ion-input formControlName="edad" type="number" aria-placeholder="¿Qué edad tiene el paciente? "></ion-input></ion-item>
+  
+
+<ion-item>
+  <ion-label stacked><b>Genero del paciente: </b></ion-label>
+</ion-item>
+<ion-item>
+  <ion-select formControlName="genero">
+  <ion-select-option [value]="1">Masculino</ion-select-option>
+  <ion-select-option [value]="2">Femenino</ion-select-option>
+</ion-select>
+</ion-item>
+
+
+<ion-item>
+  <ion-label stacked><b>Fumador:</b></ion-label>
+</ion-item>
+<ion-item>
+  <ion-select formControlName="fumador">
+  <ion-select-option [value]="1">Si</ion-select-option>
+  <ion-select-option [value]="2">No</ion-select-option>
+</ion-select>
+</ion-item>
+
+
+<ion-item>
+  <ion-label stacked><b>Obesidad: </b></ion-label>
+</ion-item> 
+<ion-item>
+  <ion-select formControlName="obesidad">
+  <ion-select-option [value]="1">Si</ion-select-option>
+  <ion-select-option [value]="2">No</ion-select-option>
+</ion-select>
+</ion-item>
+
+
+<ion-item>
+  <ion-label stacked><b>Tos seca: </b></ion-label>
+</ion-item> 
+  <ion-item>
+    <ion-select formControlName="tosSeca">
+    <ion-select-option [value]="1">Si</ion-select-option>
+    <ion-select-option [value]="2">No</ion-select-option>
+    <ion-select-option [value]="3">A veces</ion-select-option>
+  </ion-select>
+  </ion-item>
+
+
+<ion-item>
+  <ion-label stacked><b>Ronquidos: </b></ion-label>
+</ion-item> 
+<ion-item>
+  <ion-select formControlName="ronquidos">
+  <ion-select-option [value]="1">Si</ion-select-option>
+  <ion-select-option [value]="2">No</ion-select-option>
+  <ion-select-option [value]="3">A veces</ion-select-option>
+</ion-select>
+</ion-item>
+
+
+<ion-item>
+  <ion-label stacked><b>Toma alcohol: </b></ion-label>
+</ion-item> 
+<ion-item>
+  <ion-select formControlName="tomaAlcohol">
+  <ion-select-option [value]="1">Si</ion-select-option>
+  <ion-select-option [value]="2">No</ion-select-option>
+  <ion-select-option [value]="3">A veces</ion-select-option>
+</ion-select>
+</ion-item>
+
+
+<ion-item>
+  <ion-label stacked><b>Alergico al polvo: </b></ion-label>
+</ion-item> 
+<ion-item>
+  <ion-select formControlName="alergiaPolvo">
+  <ion-select-option [value]="1">Si</ion-select-option>
+  <ion-select-option [value]="2">No</ion-select-option>
+</ion-select>
+</ion-item>
+
+
+<ion-item>
+  <ion-label stacked><b>Tiene riesgo genetico: </b></ion-label>
+</ion-item>
+  <ion-item>
+    <ion-select formControlName="riesgoGenetico">
+    <ion-select-option [value]="1">Elevado</ion-select-option>
+    <ion-select-option [value]="2">Moderado</ion-select-option>
+    <ion-select-option [value]="3">Ninguno</ion-select-option>
+  </ion-select>
+</ion-item>
+
+
+<ion-item>
+  <ion-label stacked><b>Tiene riesgo ocupacional: </b></ion-label>
+</ion-item>
+<ion-item>
+  <ion-select formControlName="riesgoOcupacionales">
+  <ion-select-option [value]="1">Elevado</ion-select-option>
+  <ion-select-option [value]="2">Moderado</ion-select-option>
+  <ion-select-option [value]="3">Ninguno</ion-select-option>
+</ion-select>
+</ion-item>
+
+<ion-button expand="block" type="submit" > Agregar</ion-button>
+</form>
+
+</ion-content>

@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ (cancer | async)?.genero }}</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+ <h3> Edad </h3>
+ <p> La edad del paciente es {{ (cancer | async)?.edad}}</p>
+
+<h3> Genero </h3>
+<p> El genero del paciente {{ (cancer | async)?.genero }}  </p>
+
+<h3> fumador </h3>
+<p> El paciente {{ (cancer | async)?.fumador }} fuma</p>
+
+<ion-button expand="block" (click)="eliminarDatosPaciente()"> Eliminar Datos del paciente </ion-button>
+</ion-content>  

@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Datos de paciente
+    </ion-title>
+    <ion-buttons>
+      <ion-button routerLink="/crear">
+       <ion-icon slot="icon-only" name="add"></ion-icon> 
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card *ngFor="let c of DatosPaciente | async" routerLink="/detalle/{{c.id}}">
+   <ion-card-header>
+     {{c.edad}} 
+     </ion-card-header>
+   <ion-card-content>
+    {{c.genero}}
+  </ion-card-content>
+  </ion-card>
+  <ion-button expand="block" (click)="ExportCsv()">Exportar a Excel</ion-button>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>Aplicación de prueba</ion-title>
+  </ion-toolbar>
+</ion-footer>
